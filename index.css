@@ -1,0 +1,720 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: white;
+} 
+
+.navbg {
+    z-index: -1;
+    height: 20px;
+    background: #C9E7F2;
+}
+
+.navbar {
+    background-color: white; 
+    position: sticky;
+    z-index: 1000;
+    top: 10px;
+    width: 95%;
+    color: black;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+
+main .main-content {
+    background: linear-gradient(
+        to bottom,
+        #C9E7F2 0%,
+        #C9E7F2 75%,
+        white 100%
+    );
+    padding: 20px 0;
+}
+
+main .main-content h3 {
+    margin-top: -20px; /* Slight adjustment to avoid overlap */
+    font-family: 'Kreon', sans-serif;
+    font-size: 3rem; /* Responsive font size */
+    line-height: 1.2;
+}
+
+main .main-content h3 span {
+    color: #3167ED;
+}
+
+main .main-content p {
+    font-size: 1.25rem; /* Adjusted for readability on smaller devices */
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+main .main-content img {
+    margin-top: -10px; /* Reduced margin to align better */
+    width: 100%;
+    max-width: 500px; /* Keeps the image well-sized on larger screens */
+    height: auto;
+    object-fit: contain; /* Maintains aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the image */
+}
+
+#hiw{
+    font-family: 'Kreon';
+    width: 98%;
+    background: #C9E7F2;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 5px 5px 5px rgb(181, 179, 179);
+}
+#hiw .holder{
+    padding: 10vh 20px;
+}
+
+
+#hiw .step-number{
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #3167ED;;
+}
+#hiw .stepcontent h5{
+    font-weight: 900;
+}
+#hiw .stepcontent{
+    width: 260px;
+    font-weight: normal;
+}
+
+.steps-divider{
+    margin-bottom: 120px;
+}
+
+#catalogue h4 {
+    font-family: 'Kreon';
+    font-size: 20px;
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff; /* Blue color or your desired color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.product-card {
+    box-shadow: 0.5px 2px 0.5px 1px #bebebe; /* Shadow for cards */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensures image fits within card */
+    border: none;
+    margin: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);  /* Lift card on hover */
+}
+
+.image-container {
+    position: relative;
+    height: 150px; /* Fixed height for the image */
+    overflow: hidden; /* Crop the image to fit */
+}
+
+.card-img-top {
+    width: 100%; /* Make sure the image fills the container */
+    height: 100%; /* Make image take full container height */
+    object-fit: contain;
+}
+
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.card-title {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    margin-left: 15px;
+    font-size: 15px; /* Adjust font size for titles */
+    font-weight: lighter;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+.btn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+}
+
+.cardbtm {
+    justify-content: space-between;
+}
+
+.btnbtm {
+    border-radius: 10px;
+    width: 140px;
+    margin: 20px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    /* Adjust heading */
+    #catalogue h4 {
+        font-size: 18px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    /* Carousel navigation buttons */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Product card adjustments for mobile */
+    .product-card {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .btnbtm {
+        width: 120px;
+        margin: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust heading for tablet screens */
+    #catalogue h4 {
+        font-size: 18px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    /* Carousel navigation buttons */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Product card adjustments for tablet */
+    .product-card {
+        width: 48%;
+        margin: 10px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .btnbtm {
+        width: 130px;
+        margin: 15px;
+    }
+}
+
+/*  */
+
+
+
+
+.titlecontacts h1 {
+    font-family: 'Kreon';
+    color: #000;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.titlecontacts h1 span {
+    color: #3167ED;
+}
+
+
+/* For mobile screens */
+@media (max-width: 576px) {
+    .titlecontacts h1 {
+        text-align: center;
+        font-size: 40px; 
+    }
+}
+
+/* For tablet screens */
+@media (min-width: 576px) and (max-width: 992px) {
+    .titlecontacts h1 {
+        font-size: 36px; 
+    }
+}
+
+/* For larger screens (Desktop and above) */
+@media (min-width: 992px) {
+    .titlecontacts h1 {
+        font-size: 48px; /* Larger font size for desktop */
+    }
+}
+
+
+#contacts {
+    font-family: 'Kreon';
+    background: #C9E7F2;
+}
+
+#contacts .img-fluid {
+    min-width: 100%;
+    transform: scaleX(-1);
+    height: auto;
+    object-fit: contain; /* Ensures the image doesn't stretch */
+    padding: 10px; /* Optional: Add padding if needed */
+}
+
+#contacts .intro {
+    justify-content: center;
+    font-size: 20px;
+    word-spacing: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.contactform {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Kreon';
+    position: relative;
+    border-radius: 10px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) -14px 10px 4px 0px;
+}
+
+.descr {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.descr span {
+    color: #3167ED;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input, textarea {
+    margin: 1em 0;
+    width: 100%;
+    position: relative;
+}
+
+.input input, textarea {
+    font-size: 12px;
+    padding: 0.7em;
+    outline: none;
+    color: #000;
+    border: none;
+    border-bottom: 1.5px solid #000;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+}
+
+.input label {
+    font-size: 15px;
+    position: absolute;
+    left: -10px;
+    color: #3167ED;
+    padding: 0.7em;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.input :is(input:focus, input:valid) ~ label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+}
+
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(37, 37, 211);
+}
+
+.form button {
+    color: white;
+    font-size: 15px;
+    align-self: flex-start;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.form button:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3167ED;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.form button:hover:before {
+    opacity: 0.2;
+}
+
+.form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.socmeds {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.socmeds h5 {
+    margin-top: 70px;
+    margin-left: 10px;
+    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.socmeds .icon img {
+    margin-bottom: 40px;
+    margin-left: 5px;
+    height: 40px;
+    max-width: 100%;
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+/* Responsive Styles */
+
+/* For mobile screens */
+@media (max-width: 576px) {
+    .intro p{
+        word-spacing: normal;
+        font-size: 15px;
+    }
+    .contactform {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .descr {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .input input, .input textarea {
+        font-size: 14px;
+        padding: 0.8em;
+    }
+
+    .socmeds h5 {
+        font-size: 18px;
+    }
+
+    .socmeds .icon img {
+        height: 30px;
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+/* For tablet screens */
+@media (min-width: 576px) and (max-width: 992px) {
+    .intro p{
+        word-spacing: normal;
+    }
+    .contactform {
+        width: 70%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .descr {
+        font-size: 28px;
+    }
+
+    .input input, .input textarea {
+        font-size: 14px;
+        padding: 0.8em;
+    }
+
+    .socmeds h5 {
+        font-size: 20px;
+    }
+
+    .socmeds .icon img {
+        height: 35px;
+        margin: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+/* For desktop and larger screens */
+@media (min-width: 992px) {
+    .contactform {
+        width: 60%;
+        height: 470px;
+        margin-top: 50px;
+    }
+
+    .socmeds h5 {
+        font-size: 22px;
+    }
+
+    .socmeds .icon img {
+        height: 40px;
+
+    }
+}
+
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border: none;
+}
+.social-icon {
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    font-family: 'Kreon';
+    background: #C9E7F2;
+    padding: 5rem 0;
+}
+
+.footer .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footer .col-12, .footer .col-md-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer h5 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer .list-unstyled {
+    padding: 0;
+    margin: 0;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+    i{
+        color: #3167ED;
+    }
+}
+
+.footer .social-icon {
+    transition: transform 0.3s ease;
+    width: 30px; 
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer .slogan {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer .col-md-3 {
+        margin-bottom: 2rem;
+    }
+
+    .footer .col-md-3 ul {
+        margin-left: 0;
+    }
+
+    .footer .col-md-3 h5 {
+        font-size: 1.25rem;
+    }
+    .list-unstyled li{
+        display: flexbox;
+        flex-direction: column;
+        /* margin: 0; */
+        i{
+            font-size: 11px;
+        }
+    }
+    .info a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer .col-12 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .footer .col-12 .icon img {
+        width: 30px; /* Adjust logo size on smaller screens */
+    }
+
+    .footer .col-12 .slogan {
+        font-size: 0.875rem;
+    }
+
+    .footer .social-icon {
+        margin: 0 10px;
+    }
+
+    /* .footer .social-icon img {
+        width: 100%;
+    } */
+
+    .footer h5 {
+        font-size: 1rem;
+    }
+
+    .footer .row {
+        text-align: center;
+    }
+}
+
+.divider-line {
+    border-top: 2px solid black; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Keyframe for slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframe for sliding back */
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Class for elements to animate in */
+.animate-in {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 1s forwards;
+}
+
+/* Class for elements to animate out */
+.animate-out {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideOut 1s forwards;
+}
+
+/* Add a transition for smooth scrolling of content */
+.transition {
+    transition: all 1s ease-in-out;
+}
