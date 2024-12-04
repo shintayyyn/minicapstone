@@ -3,13 +3,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; 
     
 }
 
 body{
     background-color: white;
 } 
-
+section{
+    padding-top: 60px;
+}
 .navbg {
     z-index: -1;
     height: 20px;
@@ -18,15 +21,45 @@ body{
 
 .navbar {
     background-color: white; 
-    position: sticky;
     z-index: 1000;
     top: 10px;
     width: 95%;
     color: black;
-    padding: 0;
+    padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
 }
+
+.navbar-nav li a {
+    color: black;
+    text-decoration: none; 
+    position: relative; 
+    padding: 5px;
+    transition: color 0.3s ease-in-out; 
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.navbar-nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 3px;
+    background-color: #3167ED; 
+    transition: width 1s ease-in-out; 
+}
+
+.navbar-nav a:hover::before,
+.navbar-nav a.active::before {
+    width: 100%; 
+}
+
+.navbar-nav a:hover {
+    color: #3167ED; 
+}
+
 
 
 main .main-content {
@@ -40,9 +73,9 @@ main .main-content {
 }
 
 main .main-content h3 {
-    margin-top: -20px; /* Slight adjustment to avoid overlap */
+    margin-top: -20px; 
     font-family: 'Kreon', sans-serif;
-    font-size: 3rem; /* Responsive font size */
+    font-size: 3rem; 
     line-height: 1.2;
 }
 
@@ -51,20 +84,20 @@ main .main-content h3 span {
 }
 
 main .main-content p {
-    font-size: 1.25rem; /* Adjusted for readability on smaller devices */
+    font-size: 1.25rem; 
     font-weight: 300;
     margin-bottom: 20px;
 }
 
 main .main-content img {
-    margin-top: -10px; /* Reduced margin to align better */
+    margin-top: -10px; 
     width: 100%;
-    max-width: 500px; /* Keeps the image well-sized on larger screens */
+    max-width: 500px; 
     height: auto;
-    object-fit: contain; /* Maintains aspect ratio */
+    object-fit: contain; 
     display: block;
     margin-left: auto;
-    margin-right: auto; /* Centers the image */
+    margin-right: auto; 
 }
 
 #hiw{
@@ -107,7 +140,7 @@ main .main-content img {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #007bff; /* Blue color or your desired color */
+    background-color: #007bff; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -115,31 +148,31 @@ main .main-content img {
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
 }
 
 .product-card {
-    box-shadow: 0.5px 2px 0.5px 1px #bebebe; /* Shadow for cards */
+    box-shadow: 0.5px 2px 0.5px 1px #bebebe; 
     border-radius: 10px;
     transition: transform 0.3s ease;
-    overflow: hidden; /* Ensures image fits within card */
+    overflow: hidden; 
     border: none;
     margin: 10px;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);  /* Lift card on hover */
+    transform: translateY(-10px);  
 }
 
 .image-container {
     position: relative;
-    height: 150px; /* Fixed height for the image */
-    overflow: hidden; /* Crop the image to fit */
+    height: 150px; 
+    overflow: hidden; 
 }
 
 .card-img-top {
-    width: 100%; /* Make sure the image fills the container */
-    height: 100%; /* Make image take full container height */
+    width: 100%; 
+    height: 100%; 
     object-fit: contain;
 }
 
@@ -152,7 +185,7 @@ main .main-content img {
     font-family: 'Inter', sans-serif;
     display: flex;
     margin-left: 15px;
-    font-size: 15px; /* Adjust font size for titles */
+    font-size: 15px; 
     font-weight: lighter;
 }
 
@@ -179,21 +212,18 @@ main .main-content img {
 }
 
 @media (max-width: 767px) {
-    /* Adjust heading */
     #catalogue h4 {
         font-size: 18px;
         margin-left: 10px;
         text-align: center;
     }
 
-    /* Carousel navigation buttons */
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         width: 30px;
         height: 30px;
     }
 
-    /* Product card adjustments for mobile */
     .product-card {
         width: 100%;
         margin: 5px 0;
@@ -224,21 +254,18 @@ main .main-content img {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Adjust heading for tablet screens */
     #catalogue h4 {
         font-size: 18px;
         margin-left: 20px;
         text-align: left;
     }
 
-    /* Carousel navigation buttons */
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         width: 35px;
         height: 35px;
     }
 
-    /* Product card adjustments for tablet */
     .product-card {
         width: 48%;
         margin: 10px;
@@ -258,10 +285,6 @@ main .main-content img {
     }
 }
 
-/*  */
-
-
-
 
 .titlecontacts h1 {
     font-family: 'Kreon';
@@ -276,7 +299,6 @@ main .main-content img {
 }
 
 
-/* For mobile screens */
 @media (max-width: 576px) {
     .titlecontacts h1 {
         text-align: center;
@@ -284,17 +306,15 @@ main .main-content img {
     }
 }
 
-/* For tablet screens */
 @media (min-width: 576px) and (max-width: 992px) {
     .titlecontacts h1 {
         font-size: 36px; 
     }
 }
 
-/* For larger screens (Desktop and above) */
 @media (min-width: 992px) {
     .titlecontacts h1 {
-        font-size: 48px; /* Larger font size for desktop */
+        font-size: 48px; 
     }
 }
 
@@ -308,8 +328,8 @@ main .main-content img {
     min-width: 100%;
     transform: scaleX(-1);
     height: auto;
-    object-fit: contain; /* Ensures the image doesn't stretch */
-    padding: 10px; /* Optional: Add padding if needed */
+    object-fit: contain; 
+    padding: 10px; 
 }
 
 #contacts .intro {
@@ -455,9 +475,7 @@ main .main-content img {
     border-radius: 25px;
 }
 
-/* Responsive Styles */
 
-/* For mobile screens */
 @media (max-width: 576px) {
     .intro p{
         word-spacing: normal;
@@ -490,7 +508,6 @@ main .main-content img {
     }
 }
 
-/* For tablet screens */
 @media (min-width: 576px) and (max-width: 992px) {
     .intro p{
         word-spacing: normal;
@@ -521,7 +538,6 @@ main .main-content img {
     }
 }
 
-/* For desktop and larger screens */
 @media (min-width: 992px) {
     .contactform {
         width: 60%;
@@ -543,7 +559,7 @@ main .main-content img {
   .map-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -627,7 +643,6 @@ main .main-content img {
     .list-unstyled li{
         display: flexbox;
         flex-direction: column;
-        /* margin: 0; */
         i{
             font-size: 11px;
         }
@@ -644,7 +659,7 @@ main .main-content img {
     }
 
     .footer .col-12 .icon img {
-        width: 30px; /* Adjust logo size on smaller screens */
+        width: 30px; 
     }
 
     .footer .col-12 .slogan {
@@ -655,9 +670,6 @@ main .main-content img {
         margin: 0 10px;
     }
 
-    /* .footer .social-icon img {
-        width: 100%;
-    } */
 
     .footer h5 {
         font-size: 1rem;
@@ -674,47 +686,3 @@ main .main-content img {
     margin-bottom: 2rem;
 }
 
-
-
-/* Keyframe for slide-in animation */
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Keyframe for sliding back */
-@keyframes slideOut {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
-
-/* Class for elements to animate in */
-.animate-in {
-    opacity: 0;
-    transform: translateX(100%);
-    animation: slideIn 1s forwards;
-}
-
-/* Class for elements to animate out */
-.animate-out {
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: slideOut 1s forwards;
-}
-
-/* Add a transition for smooth scrolling of content */
-.transition {
-    transition: all 1s ease-in-out;
-}
