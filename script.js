@@ -1,13 +1,3 @@
-// Add smooth scroll behavior
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 
 
 AOS.init({
@@ -20,7 +10,6 @@ AOS.init({
 
 AOS.init();
 
-
 // Add navbar background color on scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
@@ -32,11 +21,6 @@ window.addEventListener('scroll', function() {
         navbar.style.boxShadow = 'none';
     }
 });
-
-// <!-- Bootstrap 5 JS Bundle -->
-// <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
 
     const popularProducts = [
     {
@@ -88,7 +72,7 @@ function generatePopularCards() {
                     <p><img src="img/battery.png" alt="battery"> ${product.battery} &nbsp;<i class="fa-solid fa-users"></i> ${product.capacity}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <p class="card-text"><strong>${product.price}</strong></p>
-                        <button class="btn btn-primary btn-sm rent-btn">Rent now</button>
+                        <button class="btn btn-primary btn-sm btn-md rent-btn">Rent now</button>
                     </div>
                 </div>
             </div>
