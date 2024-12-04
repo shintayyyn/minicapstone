@@ -416,7 +416,7 @@ main .main-content img {
 textarea {
     margin: 1em 0;
     width: 100%;
-    position: relative;
+    /* position: relative; */
 }
 
 .input input,
@@ -436,15 +436,14 @@ textarea {
 .input label {
     font-size: 15px;
     position: absolute;
-    left: -10px;
+    left: 60px;
     color: #3167ED;
-    padding: 0.7em;
     pointer-events: none;
     transition: all 0.5s ease;
 }
 
 .input :is(input:focus, input:valid)~label {
-    transform: translateY(-50%) scale(.9);
+    transform: translateY(-70%) scale(.9);
     margin: 0em;
     padding: 0.4em;
     background: transparent;
@@ -465,19 +464,16 @@ textarea {
 .form button {
     color: white;
     font-size: 15px;
-    align-self: flex-start;
     padding: 10px;
+    width: 50%;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
 }
 
 .form button:before {
     content: "";
-    position: absolute;
+    position: relative;
     bottom: 100%;
     left: 0;
     width: 100%;
@@ -492,7 +488,7 @@ textarea {
 }
 
 .form button:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -542,7 +538,12 @@ textarea {
         font-size: 14px;
         padding: 0.8em;
     }
-
+    .input :is(input:focus, input:valid)~label{
+        float: left;
+    }
+    .input label{
+        left: 20px;
+    }
     .socmeds h5 {
         font-size: 18px;
     }
@@ -560,7 +561,7 @@ textarea {
     }
 
     .contactform {
-        width: 70%;
+        width: 90%;
         height: auto;
         padding: 30px;
     }
