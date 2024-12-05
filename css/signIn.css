@@ -339,7 +339,7 @@ a.signup:hover {
 }
 
 
-@media (min-width:375px) and (max-width:464px) {
+@media (min-width:340px) and (max-width:464px) {
     .card {
         margin-top: 10px;
         width: 90%; 
@@ -376,7 +376,7 @@ a.signup:hover {
     }
     p.logotxt{
         margin-top: -10px;
-        margin-left: 36px;
+        margin-left: 0px;
         font-size: 10px;
         width: 150px;
     }
@@ -394,11 +394,16 @@ a.signup:hover {
     }
     .btmtxt{
         font-size: 12px;
+        a{
+            display: flex;
+            justify-content: center;
+        }
     }
     .bth{
         bottom: 0px;
         margin-top: -12px;
         font-size: 12px;
     }
+    
 }
 
