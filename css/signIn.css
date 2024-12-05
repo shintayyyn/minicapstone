@@ -218,20 +218,22 @@ a.signup:hover {
 @media (max-width: 425px) {
     .card {
         margin-top: 10px;
-        width: 90%; /* Use 90% of screen width on small devices */
-        height: 90%;
+        width: 90%; 
+        height: 50%;
     }
-
+    .logoholder{
+        margin-top: 50px;
+    }
     .iconlogo {
         align-items: center;
-        height: 60px;
-        margin-top: -77px;
+        height: 120px;
+        margin-top: -130px;
     }
 
     .roundbg {
-        margin-top: -50px;
-        width: 50px;
-        height: 50px;
+        margin-top: -100px;
+        width: 100px;
+        height: 100px;
     }
 
     .neumorphic-input {
@@ -244,7 +246,7 @@ a.signup:hover {
     }
 
     h2.logotxt {
-        top: 0;
+        margin-top: -10px;
         font-size: 20px;
     }
     p.logotxt{
@@ -269,6 +271,7 @@ a.signup:hover {
         font-size: 12px;
     }
     .bth{
+        bottom: 0px;
         margin-top: -12px;
         font-size: 12px;
     }
