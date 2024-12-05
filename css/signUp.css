@@ -410,7 +410,7 @@ a.signin:hover {
     }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 425px) and (max-width:690px) {
   .iconlogo{
     margin:0;
     position: absolute;
