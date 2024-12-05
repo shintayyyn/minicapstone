@@ -310,7 +310,7 @@ a.signin:hover {
         margin: 0;
         justify-content: center;
         width: 500px;
-        height: 450px;
+        height: 550px;
     }
      .iconlogo {
         margin: 0;
@@ -320,7 +320,7 @@ a.signin:hover {
 
     .logocontainer{
         margin: 0;
-        margin-top: 35px;
+        margin-top: -10px;
         position: absolute;
         display: flex;
         flex-direction: row;
@@ -328,7 +328,7 @@ a.signin:hover {
     .logotxt{
        margin: 0;
        margin-left: 30px;
-       margin-top: 30px;
+       margin-top: -10px;
        margin-bottom: -120px;
        h2{
        font-size: 15px;
@@ -346,6 +346,7 @@ a.signin:hover {
         margin: 0;
         margin-left: 25px;
         margin-top: 20px;
+        margin-bottom: 20px;
     }
     .abouttxt p{
         font-size: 10px;
@@ -371,7 +372,7 @@ a.signin:hover {
 
     .form-check{
         margin-left: 20px;
-        margin-top: -20px;
+        margin-top: 10px;
         font-size: 10px;
     }
  
@@ -386,7 +387,7 @@ a.signin:hover {
         height: 30px;
         margin: 0;
         margin-left: 60px;
-        margin-top: -45px;
+        margin-top: -10px;
         margin-bottom: -20px;
         p{
             margin: 0;
@@ -396,7 +397,7 @@ a.signin:hover {
     }
     .btmtxt{
         margin: 0;
-        margin-top: -5px;
+        margin-top: 20px;
         font-size: 11px;
         a{
             margin-top: -15px;
@@ -404,8 +405,105 @@ a.signin:hover {
     }
     .bth{
         margin-left: -10px;
-        margin-top: -20px;
+        margin-top: -10px;
         font-size: 11px;
     }
 }
 
+@media (min-width: 425px) {
+  .iconlogo{
+    margin:0;
+    position: absolute;
+    height: 90px;
+  }
+ 
+    .logocontainer{
+        margin: 0;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .logotxt{
+       margin: 0;
+       margin-left: 20px;
+       margin-top: 10px;
+       margin-bottom: -120px;
+       h2{
+       font-size: 15px;
+       }
+       p{
+        font-size: 10px;
+       }
+    }
+    .roundbg {
+        margin: 0;
+        width: 90px;
+        height: 90px;
+    }
+    .abouttxt{
+        margin: 0;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .abouttxt p{
+        font-size: 10px;
+    }
+    .abouttxt span{
+        align-items: center;
+        margin-top: -22px;
+       a{
+        font-size: 12px;
+       }
+    }
+    .input-icons .neumorphic-input {
+        width: 80%;
+        height: 40px;
+        margin-left: 19px;
+        font-size: 13px;
+    }
+    .input-icons .icon{
+        font-size: 12px;
+        margin-top: -6px;
+        margin-left: 20px;
+    }
+
+    .form-check{
+        margin-left: 47px;
+        margin-top: 10px;
+        font-size: 10px;
+    }
+ 
+    .input-icons i {
+        margin-left: -40px;
+        font-size: 18px;
+    }
+    .neumorphic-btn{
+        align-items: center;
+        font-size: 12px;
+        width: 50%;
+        height: 30px;
+        margin: 0;
+        margin-left: 70px;
+        margin-top: -10px;
+        margin-bottom: -20px;
+        p{
+            margin: 0;
+            margin-top: -5px;
+            font-size: 12px;
+        }
+    }
+    .btmtxt{
+        margin: 0;
+        margin-top: 20px;
+        font-size: 11px;
+        a{
+            margin-top: -15px;
+        }
+    }
+    .bth{
+        margin-left: -10px;
+        margin-top: -10px;
+        font-size: 11px;
+    }
+}
