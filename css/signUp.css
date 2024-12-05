@@ -1,0 +1,411 @@
+* {
+    font-family: 'Kreon';
+}
+
+body {
+    overflow: hidden;
+}
+
+.custom-bg {
+    background: linear-gradient(to bottom,
+            #C9E7F2 50%,
+            white 50%);
+}
+
+.card {
+    justify-content: center;
+    justify-self: center;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    width: 80%;
+    height: 94%;
+    top: 5px;
+}
+
+.neumorphic-input {
+    width: 95%;
+    text-indent: 30px;
+    border: #00000000 1px solid;
+    border-radius: 20px;
+    padding: 12px;
+    color: #9F9797;
+    background: #FFFFFF;
+    box-shadow: inset 5px 5px 7px #d4d4d4, inset -4px -4px 8px #ffffff;
+    font-size: 16px;
+
+}
+
+
+.neumorphic-input:focus {
+    box-shadow: inset 2px 2px 4px #d4d4d4, inset -2px -2px 4px #ffffff, 0 0 5px rgba(49, 103, 237, 0.5);
+    outline: none;
+}
+
+.neumorphic-btn {
+    background: #C9E7F2;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 95%;
+    font-size: 16px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
+    p{
+        margin: 0;
+        font-family: 'Inter';
+        font-size: 20px;
+    }
+}
+
+.neumorphic-btn:hover {
+    background-color: #3167ED;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.neumorphic-btn:active {
+    background-color: #3167ED;
+    color: #ffffff;
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-label a {
+    text-decoration: none;
+}
+
+.form-check-input {
+    border: 1px #3167ED solid;
+    margin-right: 10px;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-icons i {
+    position: absolute;
+}
+
+.icon {
+    padding: 15px;
+    font-size: 20px;
+    color: #74C0FC;
+    min-width: 50px;
+    text-align: center;
+}
+
+.roundbg {
+    float: inline-end;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: #C9E7F2;
+    box-shadow: 5px 2px 4px #bebebe;
+
+}
+
+.iconlogo {
+    height: 150px;
+    margin-top: -136px;
+}
+
+.logocontainer {
+    align-items: center;
+}
+
+.logotxt {
+    margin-top: -110px;
+    margin-left: 120px;
+
+    h2 {
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 13px;
+        margin-top: -10px;
+    }
+}
+
+.abouttxt {
+    p {
+        margin-top: 90px;
+        align-items: center;
+        justify-content: center;
+        font-weight: normal;
+        font-size: 40px;
+    }
+
+    span a {
+        text-decoration: none;
+        margin-top: -40px;
+        font-size: 40px;
+    }
+}
+
+a.signin::before {
+    position: absolute;
+    content: '';
+    color: #3167ED;
+    width: 10%;
+}
+
+
+a.signin {
+    color: #3167ED;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease-in-out;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+a.signin::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    transition: width 1s ease-in-out;
+}
+
+a.signin:hover::before,
+a.signin.active::before {
+    width: 100%;
+}
+
+a.signin:hover {
+    color: #3167ED;
+}
+.btmtxt{
+    margin: 0;
+    margin-top: 20px;
+}
+.btmtxt a{
+    margin: 0;
+    margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: 90%;
+    }
+    .logoholder{
+        margin-top: -50px;
+    }
+    .iconlogo {
+        margin-top: -75px;
+        height: 80px;
+    }
+
+    .roundbg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .input-icons .neumorphic-input {
+        width: 80%;
+        height: 40px;
+        margin-left: 0px;
+        font-size: 12px;
+    }
+
+     .logocontainer{
+        margin: 0;
+        margin-top: 35px;
+       margin-right: 30px;
+    } 
+.logotxt{
+    margin-top: -70px;
+
+}
+    .abouttxt{
+        margin-top: -60px;
+        margin-left: 25px;
+        p{
+        font-size: 30px;
+        }
+   span{
+        align-items: center;
+       a{
+        font-size: 30px;
+       }
+    }
+}
+    .input-icons .neumorphic-input {
+       margin: 0;
+       align-items: center;
+       justify-content: center;
+        width: 80%;
+        height: 40px;
+        margin-left: 19px;
+        font-size: 13px;
+    }
+    .input-icons .icon{
+        font-size: 13px;
+        margin-top: -1px;
+        margin-left: 20px;
+    }
+
+    .form-check{
+        margin-left: 20px;
+        margin-top: -20px;
+        font-size: 13px;
+    }
+ 
+    .input-icons i {
+        margin-left: -40px;
+        font-size: 18px;
+    }
+    .neumorphic-btn{
+        align-items: center;
+        font-size: 12px;
+        width: 50%;
+        height: 30px;
+        margin: 0;
+        margin-left: 60px;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        p{
+            margin: 0;
+            margin-top: -5px;
+            font-size: 12px;
+        }
+    }
+    .btmtxt{
+        margin: 0;
+        margin-top: 10px;
+        a{
+            margin-top: -16px;
+        }
+    }
+    .bth{
+        margin-left: -10px;
+        margin-top: -20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 425px) {
+    body{
+        justify-items: center;
+    }
+    .card{
+        position: relative;
+        margin: 0;
+        justify-content: center;
+        width: 500px;
+        height: 450px;
+    }
+     .iconlogo {
+        margin: 0;
+        margin-top: -55px;
+        height: 60px;
+    } 
+
+    .logocontainer{
+        margin: 0;
+        margin-top: 35px;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+    }
+    .logotxt{
+       margin: 0;
+       margin-left: 30px;
+       margin-top: 30px;
+       margin-bottom: -120px;
+       h2{
+       font-size: 15px;
+       }
+       p{
+        font-size: 10px;
+       }
+    }
+    .roundbg {
+        margin: 0;
+        width: 50px;
+        height: 50px;
+    }
+    .abouttxt{
+        margin: 0;
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+    .abouttxt p{
+        font-size: 10px;
+    }
+    .abouttxt span{
+        align-items: center;
+        margin-top: -22px;
+       a{
+        font-size: 12px;
+       }
+    }
+    .input-icons .neumorphic-input {
+        width: 80%;
+        height: 40px;
+        margin-left: 19px;
+        font-size: 13px;
+    }
+    .input-icons .icon{
+        font-size: 12px;
+        margin-top: -6px;
+        margin-left: 20px;
+    }
+
+    .form-check{
+        margin-left: 20px;
+        margin-top: -20px;
+        font-size: 10px;
+    }
+ 
+    .input-icons i {
+        margin-left: -40px;
+        font-size: 18px;
+    }
+    .neumorphic-btn{
+        align-items: center;
+        font-size: 12px;
+        width: 50%;
+        height: 30px;
+        margin: 0;
+        margin-left: 60px;
+        margin-top: -45px;
+        margin-bottom: -20px;
+        p{
+            margin: 0;
+            margin-top: -5px;
+            font-size: 12px;
+        }
+    }
+    .btmtxt{
+        margin: 0;
+        margin-top: -5px;
+        font-size: 11px;
+        a{
+            margin-top: -15px;
+        }
+    }
+    .bth{
+        margin-left: -10px;
+        margin-top: -20px;
+        font-size: 11px;
+    }
+}
+
