@@ -310,7 +310,7 @@ a.signin:hover {
         margin: 0;
         justify-content: center;
         width: 500px;
-        height: 550px;
+        height: max-content;
     }
      .iconlogo {
         margin: 0;
