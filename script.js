@@ -1,17 +1,13 @@
-
-
 AOS.init({
-    duration: 1200,     
-    offset: 200,        
-    easing: 'ease-in-out', 
-    once: onscroll,         
-  });
-  
+    duration: 1200,
+    offset: 200,
+    easing: 'ease-in-out',
+    once: onscroll,
+});
 
 AOS.init();
 
-// Add navbar background color on scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
         navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
@@ -22,46 +18,22 @@ window.addEventListener('scroll', function() {
     }
 });
 
-    const popularProducts = [
-    {
-        name: 'Hatasu MakoWER E-Trike',
-        image: 'img/e-trike.png',
-        battery: '36V',
-        capacity: '3 people',
-        price: '₱300/day'
-    },
-    {
-        name: 'Hatasu Nero E-Bike',
-        image: 'img/e-bike.png',
-        battery: '36V',
-        capacity: '2 people',
-        price: '₱200/day'
-    },
-    {
-        name: 'YNG 3 E-TRIKE',
-        image: 'img/e-trike2.png',
-        battery: '36V',
-        capacity: '3 people',
-        price: '₱250/day'
-    },
-    {
-        name: 'Hatasu Kumi 2023 E-Bike',
-        image: 'img/e-bike2.png',
-        battery: '36V',
-        capacity: '1 person',
-        price: '₱150/day'
-    }
+const popularProducts = [
+    { name: 'Hatasu MakoWER E-Trike', image: 'img/e-trike.png', battery: '36V', capacity: '3 people', price: '₱300/day' },
+    { name: 'Hatasu Nero E-Bike', image: 'img/e-bike.png', battery: '36V', capacity: '2 people', price: '₱200/day' },
+    { name: 'YNG 3 E-TRIKE', image: 'img/e-trike2.png', battery: '36V', capacity: '3 people', price: '₱250/day' },
+    { name: 'Hatasu Kumi 2023 E-Bike', image: 'img/e-bike2.png', battery: '36V', capacity: '1 person', price: '₱150/day' },
 ];
 
 function generatePopularCards() {
     const carouselItemsContainer = document.getElementById('carouselPopularItems');
     const gridItemsContainer = document.getElementById('gridPopularItems');
-    
+
     popularProducts.forEach((product, index) => {
         const carouselItem = document.createElement('div');
         carouselItem.classList.add('carousel-item');
         if (index === 0) carouselItem.classList.add('active');
-        
+
         carouselItem.innerHTML = `
             <div class="card product-card">
                 <h5 class="card-title mt-3 text-center">${product.name}</h5>
@@ -78,10 +50,10 @@ function generatePopularCards() {
             </div>
         `;
         carouselItemsContainer.appendChild(carouselItem);
-        
+
         const gridItem = document.createElement('div');
         gridItem.classList.add('col-6', 'col-sm-4', 'col-md-3', 'mb-3');
-        
+
         gridItem.innerHTML = `
             <div class="card product-card">
                 <h5 class="card-title mt-3 text-center">${product.name}</h5>
@@ -103,126 +75,68 @@ function generatePopularCards() {
 
 generatePopularCards();
 
-    // Product data for the Recommendation section (This could be fetched from an API or database)
-    const recommendationProducts = [
-        {
-            name: 'Hatasu MakoWER E-Trike',
-            image: 'img/e-trike.png',
-            battery: '36V',
-            capacity: '3 people',
-            price: '₱300/day'
-        },
-        {
-            name: 'Hatasu Nero E-Bike',
-            image: 'img/e-bike.png',
-            battery: '36V',
-            capacity: '2 people',
-            price: '₱200/day'
-        },
-        {
-            name: 'YNG 3 E-TRIKE',
-            image: 'img/e-trike2.png',
-            battery: '36V',
-            capacity: '3 people',
-            price: '₱250/day'
-        },
-        {
-            name: 'GTR Mobility Bike',
-            image: 'img/e-bike2.png',
-            battery: '48V',
-            capacity: '2 people',
-            price: '₱350/day'
-        }
-    ];
-    
-    // Function to generate product cards for Recommendation (Grid and Carousel)
-    function generateRecommendationCards() {
-        const carouselItemsContainer = document.getElementById('carouselItems');
-        const gridItemsContainer = document.getElementById('gridItems');
-        
-        // Loop through the recommendation products array to create cards for both carousel and grid
-        recommendationProducts.forEach((product, index) => {
-            // Create carousel item
-            const carouselItem = document.createElement('div');
-            carouselItem.classList.add('carousel-item');
-            if (index === 0) carouselItem.classList.add('active'); // Set the first item as active
-            
-            carouselItem.innerHTML = `
-                <div class="card product-card">
-                    <h5 class="card-title mt-3 text-center">${product.name}</h5>
-                    <div class="image-container text-center">
-                        <img src="${product.image}" class="card-img-top img-fluid" alt="${product.name}">
-                    </div>
-                    <div class="card-body">
-                        <p><img src="img/battery.png" alt="battery"> ${product.battery} &nbsp;<i class="fa-solid fa-users"></i> ${product.capacity}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="card-text"><strong>${product.price}</strong></p>
-                            <button class="btn btn-primary btn-sm rent-btn">Rent now</button>
-                        </div>
+const recommendationProducts = [
+    { name: 'Hatasu MakoWER E-Trike', image: 'img/e-trike.png', battery: '36V', capacity: '3 people', price: '₱300/day' },
+    { name: 'Hatasu Nero E-Bike', image: 'img/e-bike.png', battery: '36V', capacity: '2 people', price: '₱200/day' },
+    { name: 'YNG 3 E-TRIKE', image: 'img/e-trike2.png', battery: '36V', capacity: '3 people', price: '₱250/day' },
+    { name: 'GTR Mobility Bike', image: 'img/e-bike2.png', battery: '48V', capacity: '2 people', price: '₱350/day' },
+];
+
+function generateRecommendationCards() {
+    const carouselItemsContainer = document.getElementById('carouselItems');
+    const gridItemsContainer = document.getElementById('gridItems');
+
+    recommendationProducts.forEach((product, index) => {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item');
+        if (index === 0) carouselItem.classList.add('active');
+
+        carouselItem.innerHTML = `
+            <div class="card product-card">
+                <h5 class="card-title mt-3 text-center">${product.name}</h5>
+                <div class="image-container text-center">
+                    <img src="${product.image}" class="card-img-top img-fluid" alt="${product.name}">
+                </div>
+                <div class="card-body">
+                    <p><img src="img/battery.png" alt="battery"> ${product.battery} &nbsp;<i class="fa-solid fa-users"></i> ${product.capacity}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="card-text"><strong>${product.price}</strong></p>
+                        <button class="btn btn-primary btn-sm rent-btn">Rent now</button>
                     </div>
                 </div>
-            `;
-            carouselItemsContainer.appendChild(carouselItem);
-            
-            // Create grid item
-            const gridItem = document.createElement('div');
-            gridItem.classList.add('col-6', 'col-sm-4', 'col-md-3', 'mb-3');
-            
-            gridItem.innerHTML = `
-                <div class="card product-card">
-                    <h5 class="card-title mt-3 text-center">${product.name}</h5>
-                    <div class="image-container text-center">
-                        <img src="${product.image}" class="card-img-top img-fluid" alt="${product.name}">
-                    </div>
-                    <div class="card-body">
-                        <p><img src="img/battery.png" alt="battery"> ${product.battery} &nbsp;<i class="fa-solid fa-users"></i> ${product.capacity}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <p class="card-text"><strong>${product.price}</strong></p>
-                            <button class="btn btn-primary btn-sm rent-btn">Rent now</button>
-                        </div>
+            </div>
+        `;
+        carouselItemsContainer.appendChild(carouselItem);
+
+        const gridItem = document.createElement('div');
+        gridItem.classList.add('col-6', 'col-sm-4', 'col-md-3', 'mb-3');
+
+        gridItem.innerHTML = `
+            <div class="card product-card">
+                <h5 class="card-title mt-3 text-center">${product.name}</h5>
+                <div class="image-container text-center">
+                    <img src="${product.image}" class="card-img-top img-fluid" alt="${product.name}">
+                </div>
+                <div class="card-body">
+                    <p><img src="img/battery.png" alt="battery"> ${product.battery} &nbsp;<i class="fa-solid fa-users"></i> ${product.capacity}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="card-text"><strong>${product.price}</strong></p>
+                        <button class="btn btn-primary btn-sm rent-btn">Rent now</button>
                     </div>
                 </div>
-            `;
-            gridItemsContainer.appendChild(gridItem);
-        });
-    }
-    
-    // Call the function to generate product cards for the Recommendation section
-    generateRecommendationCards();
+            </div>
+        `;
+        gridItemsContainer.appendChild(gridItem);
+    });
+}
 
+generateRecommendationCards();
 
-
-    const moreProducts = [
-    {
-            name: 'Hatasu MakoWER E-Trike',
-            image: 'img/e-trike.png',
-            battery: '36V',
-            capacity: '3 people',
-            price: '₱300/day'
-        },
-        {
-            name: 'Hatasu Nero E-Bike',
-            image: 'img/e-bike.png',
-            battery: '36V',
-            capacity: '2 people',
-            price: '₱200/day'
-        },
-        {
-            name: 'YNG 3 E-TRIKE',
-            image: 'img/e-trike2.png',
-            battery: '36V',
-            capacity: '3 people',
-            price: '₱250/day'
-        },
-        {
-            name: 'GTR Mobility Bike',
-            image: 'img/e-bike2.png',
-            battery: '48V',
-            capacity: '2 people',
-            price: '₱350/day'
-        }
-
-        
+const moreProducts = [
+    { name: 'Hatasu MakoWER E-Trike', image: 'img/e-trike.png', battery: '36V', capacity: '3 people', price: '₱300/day' },
+    { name: 'Hatasu Nero E-Bike', image: 'img/e-bike.png', battery: '36V', capacity: '2 people', price: '₱200/day' },
+    { name: 'YNG 3 E-TRIKE', image: 'img/e-trike2.png', battery: '36V', capacity: '3 people', price: '₱250/day' },
+    { name: 'GTR Mobility Bike', image: 'img/e-bike2.png', battery: '48V', capacity: '2 people', price: '₱350/day' },
 ];
 
 function generateProductCards(products, carouselContainer, gridContainer) {
@@ -230,7 +144,7 @@ function generateProductCards(products, carouselContainer, gridContainer) {
         const carouselItem = document.createElement('div');
         carouselItem.classList.add('carousel-item');
         if (index === 0) carouselItem.classList.add('active');
-        
+
         carouselItem.innerHTML = `
             <div class="card product-card">
                 <h5 class="card-title mt-3 text-center">${product.name}</h5>
@@ -250,7 +164,7 @@ function generateProductCards(products, carouselContainer, gridContainer) {
 
         const gridItem = document.createElement('div');
         gridItem.classList.add('col-6', 'col-sm-4', 'col-md-3', 'mb-3');
-        
+
         gridItem.innerHTML = `
             <div class="card product-card">
                 <h5 class="card-title mt-3 text-center">${product.name}</h5>
@@ -275,17 +189,38 @@ function toggleMoreProducts() {
     const showMoreBtn = document.getElementById('showMoreBtn');
 
     if (moreProductsContainer.classList.contains('d-none')) {
-        // Show the more products section
         moreProductsContainer.classList.remove('d-none');
-        showMoreBtn.textContent = "Show Less";  // Change the button text
+        showMoreBtn.textContent = "Show Less";
         generateProductCards(moreProducts, document.getElementById('carouselMoreItemsContent'), document.getElementById('gridMoreItems'));
     } else {
-        // Hide the more products section
         moreProductsContainer.classList.add('d-none');
-        showMoreBtn.textContent = "Show More";  // Revert the button text
+        showMoreBtn.textContent = "Show More";
     }
 }
 
 document.getElementById('showMoreBtn').addEventListener('click', toggleMoreProducts);
 
 generateProductCards(popularProducts, document.getElementById('carouselPopularItems'), document.getElementById('gridPopularItems'));
+
+const signInForm = document.getElementById("sign-in-form");
+const signUpForm = document.getElementById("sign-up-form");
+const signInLink = document.querySelector('.signup');
+const signUpLink = document.querySelector('.signin');
+
+signInLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    signInForm.classList.add('fade-out-slide-up');
+    setTimeout(() => {
+        signUpForm.classList.remove('fade-out-slide-up');
+        signUpForm.classList.add('fade-in-slide-up');
+    }, 500);
+});
+
+signUpLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    signUpForm.classList.add('fade-out-slide-up');
+    setTimeout(() => {
+        signInForm.classList.remove('fade-out-slide-up');
+        signInForm.classList.add('fade-in-slide-up');
+    }, 500);
+});
