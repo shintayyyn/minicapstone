@@ -175,7 +175,6 @@ a.signup:hover {
     margin: 0 auto;
 }
 
-/* Media Queries for Responsiveness */
 
 @media (max-width: 768px) {
     .card {
@@ -183,7 +182,7 @@ a.signup:hover {
         height: 90%;
     }
     .logoholder{
-        margin-top: -50px;
+        margin-top: 10px;
     }
     .iconlogo {
         margin-top: -100px;
@@ -381,12 +380,13 @@ a.signup:hover {
         width: 150px;
     }
     .neumorphic-input{
-        width: 100%;
-        margin-left: 5px;
+        width: 250px;
+        justify-self: center;
+        margin-left:-0px;
     }
 
     .input-icons i {
-        margin-left: 5px;
+        margin-left: -34px;
         font-size: 18px;
     }
     .neumorphic-btn{
@@ -406,3 +406,4 @@ a.signup:hover {
     }
     
 }
+
