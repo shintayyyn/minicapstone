@@ -26,7 +26,7 @@
 }
 
 .logotxt {
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 .iconlogo {
@@ -99,6 +99,7 @@
 
 .form-wrapper {
     position: relative;
+    
     width: 100%;
     height: 100%;
 }
@@ -244,17 +245,6 @@ a.signup:hover {
         font-size: 14px;
         padding: 8px;
     }
-
-    h2.logotxt {
-        margin-top: -10px;
-        font-size: 20px;
-    }
-    p.logotxt{
-        margin-top: -10px;
-        margin-left: 36px;
-        font-size: 10px;
-        width: 150px;
-    }
     .neumorphic-input{
         width: 100%;
         margin-left: 5px;
@@ -305,17 +295,7 @@ a.signup:hover {
         font-size: 14px;
         padding: 8px;
     }
-
-    h2.logotxt {
-        margin-top: -10px;
-        font-size: 20px;
-    }
-    p.logotxt{
-        margin-top: -10px;
-        margin-left: -10px;
-        font-size: 10px;
-        width: 150px;
-    }
+    
     .neumorphic-input{
         margin-left: -40px;
         width: 200px;
@@ -370,19 +350,13 @@ a.signup:hover {
         padding: 8px;
     }
 
-    h2.logotxt {
-        margin-top: -10px;
-        font-size: 20px;
-    }
-    p.logotxt{
-        margin-top: -10px;
-        margin-left: 0px;
-        font-size: 10px;
-        width: 150px;
-    }
     .neumorphic-input{
         width: 100%;
         margin-left: 5px;
+    }
+
+    .input-icons {
+        width: 90%;
     }
 
     .input-icons i {
@@ -406,4 +380,3 @@ a.signup:hover {
     }
     
 }
-
