@@ -64,7 +64,7 @@ function generatePopularCards() {
                     <p><img src="img/battery.png" alt="battery"> ${product.battery} &nbsp;<i class="fa-solid fa-users"></i> ${product.capacity}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <p class="card-text"><strong>${product.price}</strong></p>
-                        <button class="btn btn-primary btn-sm rent-btn" href="signInForm.html">Rent now</button>
+                          <a class="btn btn-primary btn-sm btn-md rent-btn" href="signInForm.html">Rent now</a>
                     </div>
                 </div>
             </div>
